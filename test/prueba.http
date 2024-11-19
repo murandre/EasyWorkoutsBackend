@@ -1,0 +1,114 @@
+//prueba login
+@login = http://localhost:3000/users/login
+
+@signup = http://localhost:3000/user/usersp
+
+@getData = http://localhost:3000/user/getData
+
+@crearMateria = http://localhost:3000/user/crearMateria
+
+@asignarMateria = http://localhost:3000/user/asignarMateria
+
+@getmateria = http://localhost:3000/user/materias/47273490
+
+@getallejercicios =  http://localhost:3000/getAllEjercicios
+
+@createRoutine = http://localhost:3000/user/createRoutine
+
+@getRoutineById = http://localhost:3000/user/rutina/5
+
+@getAllRoutines = http://localhost:3000/user/getAllRoutines
+
+@getPhotos = http://localhost:3000/user/getPhotos 
+
+
+
+POST  {{login}}
+Content-Type: application/json
+
+{
+    "dni":"3",
+    "password":"3"
+}
+
+###
+
+POST {{signup}}
+Content-Type: application/json
+
+{
+    "username":"topoxd",
+    "dni":"43455656",
+    "email":"topomc@gmail.com",
+    "password":"2432"
+}
+
+###
+
+
+
+get {{getallejercicios}}
+mani : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMTc3Mjg3MSIsImlhdCI6MTcxNzM0MTE5NywiZXhwIjoxNzMyODkzMTk3fQ.92xHd3p-hFzCiGJZowZo-pdSiIjzs3iENkL81V7NeOM
+
+###
+@createRoutine = http://localhost:3000/user/createRoutine
+
+POST {{createRoutine}}
+Content-Type: application/json
+
+{
+    "nombre":"test",
+    "duracion":"45",
+    "foto":"https://i.imgur.com/iQgUvuI.jpeg",
+    "creador_dni":"12345678"
+}
+
+###
+@addExercisesToRoutine = http://localhost:3000/user/addExercisesToRoutine
+
+POST {{addExercisesToRoutine}}
+Content-Type: application/json
+
+{
+  "rutina_id": "11",
+  "ejercicios": [
+    { "ejercicio_id": 1, "series": 3 },
+    { "ejercicio_id": 2, "series": 4 }
+  ]
+}
+
+###
+
+@getRoutineWithExercises = http://localhost:3000/user/rutina/41
+
+
+GET {{getRoutineWithExercises}}
+Content-Type: application/json
+
+###
+
+GET {{getAllRoutines}}
+Content-Type: application/json
+
+###
+
+GET {{getPhotos}}
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:3000/rutina/42
+Content-Type: application/json
+
+###
+
+PUT http://localhost:3000/user/update
+Content-Type: application/json
+mani : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiaWF0IjoxNzMxOTg5NDQ5LCJleHAiOjE3NDc1NDE0NDl9.KjICww-PAfHIxo7YS-Nq0BEb7ckHvdQyAzfwCPLuBjg
+
+{
+    "newUsername": "cuatro",
+    "newEmail": "cuatro@gmail.com",
+    "newPassword": "4"
+}
+
