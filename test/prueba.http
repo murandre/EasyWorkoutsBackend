@@ -1,33 +1,32 @@
 //prueba login
-@login = http://localhost:3000/users/login
-
-@signup = http://localhost:3000/user/usersp
-
-@getData = http://localhost:3000/user/getData
-
-@crearMateria = http://localhost:3000/user/crearMateria
-
-@asignarMateria = http://localhost:3000/user/asignarMateria
-
-@getmateria = http://localhost:3000/user/materias/47273490
-
-@getallejercicios =  http://localhost:3000/getAllEjercicios
-
-@createRoutine = http://localhost:3000/user/createRoutine
-
-@getRoutineById = http://localhost:3000/user/rutina/5
-
-@getAllRoutines = http://localhost:3000/user/getAllRoutines
-
-@getPhotos = http://localhost:3000/user/getPhotos 
 
 
 
-POST  {{login}}
+@signup = https://backend-eta-liart.vercel.app/user/usersp
+
+@getData = http://backend-eta-liart.vercel.app/user/getData
+
+
+
+
+@getallejercicios =  http://backend-eta-liart.vercel.app/getAllEjercicios
+
+@createRoutine = http://backend-eta-liart.vercel.app/user/createRoutine
+
+@getRoutineById = http://backend-eta-liart.vercel.app/user/rutina/5
+
+@getAllRoutines = http://backend-eta-liart.vercel.app/user/getAllRoutines
+
+@getPhotos = http://backend-eta-liart.vercel.app/user/getPhotos 
+
+@login = https://backend-eta-liart.vercel.app/users/login
+
+
+POST {{login}}
 Content-Type: application/json
 
 {
-    "dni":"3",
+    "dni":"4345565",
     "password":"3"
 }
 
@@ -38,8 +37,7 @@ Content-Type: application/json
 
 {
     "username":"topoxd",
-    "dni":"43455656",
-    "email":"topomc@gmail.com",
+    "email":"gaga@gmail.com",
     "password":"2432"
 }
 
@@ -64,13 +62,13 @@ Content-Type: application/json
 }
 
 ###
-@addExercisesToRoutine = http://localhost:3000/user/addExercisesToRoutine
+@addExercisesToRoutine = https://backend-eta-liart.vercel.app/user/addExercisesToRoutine
 
 POST {{addExercisesToRoutine}}
 Content-Type: application/json
 
 {
-  "rutina_id": "11",
+  "rutina_id": "45",
   "ejercicios": [
     { "ejercicio_id": 1, "series": 3 },
     { "ejercicio_id": 2, "series": 4 }
